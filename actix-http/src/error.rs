@@ -127,8 +127,12 @@ impl dyn ResponseError + 'static {
     }
 }
 
+/// `InternalServerError` for `actix::MailboxError`
+#[cfg(feature = "actix")]
 impl ResponseError for actix::MailboxError {} 
 
+/// `InternalServerError` for `actix::ResolverError`
+#[cfg(feature = "actix")]
 impl ResponseError for actix::ResolverError {} 
 
 impl fmt::Display for Error {
