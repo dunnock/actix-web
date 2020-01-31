@@ -127,6 +127,10 @@ impl dyn ResponseError + 'static {
     }
 }
 
+impl ResponseError for actix::MailboxError {} 
+
+impl ResponseError for actix::ResolverError {} 
+
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Display::fmt(&self.cause, f)
