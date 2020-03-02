@@ -90,9 +90,9 @@ fail-ure = { version = "0.1.5", package="failure", optional = true }
 
 [dev-dependencies]
 actix-server = "1.0.0"
-actix-connect = { version = "1.0.2", features=["openssl"] }
+actix-connect = { version = "1.0.2", git = "https://github.com/actix/actix-net", features=["openssl"] }
 actix-http-test = { version = "1.0.0", features=["openssl"] }
-actix-tls = { version = "1.0.0", features=["openssl"] }
+actix-tls = { version = "1.0.0", git = "https://github.com/actix/actix-net", features=["openssl"] }
 futures = "0.3.1"
 env_logger = "0.6"
 serde_derive = "1.0"
