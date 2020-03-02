@@ -42,11 +42,11 @@ secure-cookies = ["ring"]
 [dependencies]
 actix-service = "1.0.1"
 actix-codec = "0.2.0"
-actix-connect = "1.0.2"
+actix-connect = { version = "1.0.2", git = "https://github.com/actix/actix-net" }
 actix-utils = "1.0.3"
 actix-rt = "1.0.0"
 actix-threadpool = "0.3.1"
-actix-tls = { version = "1.0.0", optional = true }
+actix-tls = { version = "1.0.0", git = "https://github.com/actix/actix-net", optional = true }
 
 base64 = "0.11"
 bitflags = "1.2"
